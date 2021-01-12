@@ -1,0 +1,11 @@
+{
+  "name": "socketApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ioredis": "^4.19.4",
+    "socket.io": "^3.0.4",
+    "socket.io-redis": "^6.0.1"
+  }
+}
