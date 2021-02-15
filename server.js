@@ -27,5 +27,14 @@ sub.on("message", function(channel, message) {
   console.log(`channel: ${channel}, message: ${message}`);
   io.sockets.emit('msg', message);
 });
+// サーバー台数分イベントが飛んでくる
+// sub.psubscribe('*')
+// sub.on('pmessage', async (pattern, channel, message) => {
+//   console.log(`channel: ${channel}, message: ${message}`);
+//   if (channel === 'Test Channel') {
+//     io.sockets.emit('msg', message);
+//   }
+// })
+
 
 server.listen(port);
