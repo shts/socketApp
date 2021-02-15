@@ -28,6 +28,7 @@ sub.on("message", function(channel, message) {
   io.sockets.emit('msg', message);
 });
 // サーバー台数分イベントが飛んでくる
+// socket-io.redis と同じ redis を使っているので '*' パターンだと全ての io.sockets.emit イベントを拾ってしまう
 // sub.psubscribe('*')
 // sub.on('pmessage', async (pattern, channel, message) => {
 //   console.log(`channel: ${channel}, message: ${message}`);
